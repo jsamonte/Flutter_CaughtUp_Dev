@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import './fakedata.dart' as FakeData;
+
+import './EventTabView.dart' as EventTabView;
+
+
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -89,6 +94,20 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            new RaisedButton(
+                child: const Text('Open Calendar View'),
+                color: Theme.of(context).accentColor,
+                elevation: 4.0,
+                splashColor: Colors.blueGrey,
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EventTabView.EventTabView(
+                      OpenEventDocument: FakeData.fakeEventData2,)
+                    ),
+                  );
+                }
+            ),
             new Text(
               'You have pushed the button this many times:',
             ),
