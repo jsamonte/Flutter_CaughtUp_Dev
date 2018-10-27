@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 
-import './MyFBDocuments.dart' as MyFBDocuments;
-import './MyUtility.dart' as MyUtility;
-import './MyScheduleFirebaseUtility.dart' as MyScheduleFirebaseUtility;
-import './fakedata.dart' as fakedata;
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
+import 'package:flutter_caughtup_dev/Utility/MyUtility.dart' as MyUtility;
+import 'package:flutter_caughtup_dev/Utility/MyScheduleFirebaseUtility.dart' as MyScheduleFirebaseUtility;
+import 'package:flutter_caughtup_dev/Utility/FakeData.dart' as fakedata;
 
 /// A list of the users friends.
 List<MyFBDocuments.UserFriendItem> userFriendsDocList = new List();

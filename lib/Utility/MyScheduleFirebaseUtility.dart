@@ -1,8 +1,8 @@
 
 
-import './MyFBConstants.dart' as MyConstants;
+import 'package:flutter_caughtup_dev/Utility/MyFBConstants.dart' as MyConstants;
 
-import './MyFBDocuments.dart' as MyFBDocuments;
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 
 
 String encodeTime(double eventStartTime) {

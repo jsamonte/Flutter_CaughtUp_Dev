@@ -1,17 +1,17 @@
 import 'dart:async';
 
-import './MyUtility.dart' as MyUtility;
+import 'package:flutter_caughtup_dev/Utility/MyUtility.dart' as MyUtility;
 
 //import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 import './EventTabView.dart' as EventTabView;
 
-import './MyFBDocuments.dart' as MyFBDocuments;
-import './MyFBConstants.dart' as MyFBConstants;
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
+import 'package:flutter_caughtup_dev/Utility/MyFBConstants.dart' as MyFBConstants;
 
 import './CalSubScheduleView.dart' as CalSubScheduleView;
-import './MyScheduleFirebaseUtility.dart' as MyScheduleFirebaseUtility;
+import 'package:flutter_caughtup_dev/Utility/MyScheduleFirebaseUtility.dart' as MyScheduleFirebaseUtility;
 
 import 'package:intl/intl.dart';
 

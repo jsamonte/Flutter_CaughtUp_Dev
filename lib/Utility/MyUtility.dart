@@ -2,7 +2,7 @@
 import 'dart:async';
 
 import 'package:url_launcher/url_launcher.dart';
-import './MyFBDocuments.dart' as MyFBDocuments;
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 
 // This is to find urls on in the messenger
 findUrl(String text) {

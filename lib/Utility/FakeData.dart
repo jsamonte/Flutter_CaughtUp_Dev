@@ -1,6 +1,6 @@
-import './MyFBDocuments.dart' as MyFBDocuments;
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 
-import './MyFBConstants.dart' as MyFBConstants;
+import 'package:flutter_caughtup_dev/Utility/MyFBConstants.dart' as MyFBConstants;
 
 MyFBDocuments.UserPersonItem friendWithConflict = new MyFBDocuments.UserPersonItem(
 

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import './MyFBDocuments.dart' as MyFBDocuments;
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 import './EventSubDetailPage.dart' as EventSubDetailPage;
 import './EventSubAvailablePage.dart' as EventSubAvailablePage;
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import './fakedata.dart' as FakeData;
+import 'package:flutter_caughtup_dev/Utility/FakeData.dart' as FakeData;
 
 import './EventTabView.dart' as EventTabView;
-
+import './CalMainNavigationDrawer.dart' as CalMainNavigationDrawer;
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'CaughtUp Dev',
       theme: new ThemeData(
         // This is the theme of your application.
         //
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'CaughtUp Dev Env'),
     );
   }
 }
@@ -95,10 +95,23 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new RaisedButton(
-                child: const Text('Open Calendar View'),
+                child: const Text('CalendarView'),
                 color: Theme.of(context).accentColor,
                 elevation: 4.0,
-                splashColor: Colors.blueGrey,
+                splashColor: Colors.orange,
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CalMainNavigationDrawer.CalMainNavigationDrawer()
+                    ),
+                  );
+                }
+            ),
+            new RaisedButton(
+                child: const Text('EventDetailPage'),
+                color: Theme.of(context).accentColor,
+                elevation: 4.0,
+                splashColor: Colors.orange,
                 onPressed: (){
                   Navigator.push(
                     context,
