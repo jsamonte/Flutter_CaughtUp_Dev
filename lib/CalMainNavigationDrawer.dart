@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import './CalSubScheduleView.dart' as CalSubScheduleView;
 
+import './CalSubWeekView.dart' as CalSubWeekView;
+
 // Opened Calendar View Navigation Drawer
 class CalMainNavigationDrawer extends StatefulWidget {
   CalMainNavigationDrawer({Key key})
@@ -52,7 +54,18 @@ class CalMainNavigationDrawerState extends State<CalMainNavigationDrawer> {
               ),
             ),
             new ListTile(
-              title: new Text('Schedule'),
+              title: new Container(
+                child: new Row(
+                  children: <Widget>[
+                    new Container(
+                      child: Icon(Icons.view_agenda),
+
+                    ),
+                    new Text("Schedule")
+                  ],
+                ),
+              ),
+//              title: new Text('Schedule'),
               onTap: () {
                 // Update Fragment
                 setState(() {
@@ -124,9 +137,10 @@ class CalMainNavigationDrawerState extends State<CalMainNavigationDrawer> {
         );
       case 2:
         // Week View
-        return new Container(
-          child: new Center(child: new Text('Week View')),
-        );
+      return new CalSubWeekView.CalSubWeekView();
+//        return new Container(
+//          child: new Center(child: new Text('Week View')),
+//        );
       case 3:
         // Month View
         return new Container(
