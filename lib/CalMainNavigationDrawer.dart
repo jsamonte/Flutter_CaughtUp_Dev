@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 import './CalSubScheduleView.dart' as CalSubScheduleView;
+import'./CalSubDayView.dart' as CalSubDayView;
+
 
 import './CalSubWeekView.dart' as CalSubWeekView;
 
@@ -132,9 +134,10 @@ class CalMainNavigationDrawerState extends State<CalMainNavigationDrawer> {
         return new CalSubScheduleView.CalSubScheduleView();
       case 1:
         // Day View
-        return new Container(
-          child: new Center(child: new Text('Day View')),
-        );
+      return new CalSubDayView.CalSubDayView();
+//        return new CalSubDayView.CalSubDayView()(
+//          child: new Center(child: new Text('Day View')),
+//        );
       case 2:
         // Week View
       return new CalSubWeekView.CalSubWeekView();

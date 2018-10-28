@@ -18,7 +18,6 @@ dependencies:
 
 
   flutter_calendar: ^0.0.1
-
   intl: ^0.15.7               # This is to format the date
   url_launcher: ^4.0.1        # This is to open urls
 
