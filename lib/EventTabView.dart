@@ -1,13 +1,10 @@
 
 import 'package:flutter/material.dart';
-
-import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 import './EventSubDetailPage.dart' as EventSubDetailPage;
 import './EventSubAvailablePage.dart' as EventSubAvailablePage;
+import './EventCreatePage.dart' as EventCreatePage;
 
-
-/// A global key to find its own Scaffold for the AppBar's action.
-final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
+import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 
 /// The event view tab which shows event details.
 class EventTabView extends StatefulWidget {
@@ -45,10 +42,22 @@ class _EventTabViewState extends State<EventTabView> {
     return new DefaultTabController(
       length: choices.length,
       child: new Scaffold(
-        key: scaffoldKey,
         appBar: new AppBar(
           title: new Text(widget.OpenEventDocument.title),
           actions: <Widget>[
+            new IconButton(
+                icon: new Icon(Icons.edit, color: Colors.white,),
+                onPressed: (){
+                  // launch
+                  print("Edit Button was pressed ");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EventCreatePage.EventCreatePage(
+                      eventDocument: widget.OpenEventDocument,)
+                    ),
+                  );
+                }
+            ),
             new PopupMenuButton<String>(
                 padding: EdgeInsets.zero,
                 onSelected: showMenuSelection,
@@ -86,10 +95,11 @@ class _EventTabViewState extends State<EventTabView> {
         ),
         body: new TabBarView(
           children: choices.map((Choice choice) {
-            return new Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: new ChoiceCard(choice: choice),
-            );
+            return new ChoiceCard(choice: choice);
+//            return new Padding(
+//              padding: const EdgeInsets.all(16.0),
+//              child: new ChoiceCard(choice: choice),
+//            );
           }).toList(),
         ),
       ),

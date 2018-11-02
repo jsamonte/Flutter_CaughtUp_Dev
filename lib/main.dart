@@ -4,7 +4,7 @@ import 'package:flutter_caughtup_dev/Utility/FakeData.dart' as FakeData;
 
 import './EventTabView.dart' as EventTabView;
 import './CalMainNavigationDrawer.dart' as CalMainNavigationDrawer;
-
+import './EventCreatePage.dart' as EventCreatePage;
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -103,6 +103,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => CalMainNavigationDrawer.CalMainNavigationDrawer()
+                    ),
+                  );
+                }
+            ),
+            new RaisedButton(
+                child: const Text('EventCreatePage'),
+                color: Theme.of(context).accentColor,
+                elevation: 4.0,
+                splashColor: Colors.orange,
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EventCreatePage.EventCreatePage(
+                      eventDocument: FakeData.fakeEventData2,)
                     ),
                   );
                 }

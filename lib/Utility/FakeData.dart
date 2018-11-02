@@ -15,7 +15,7 @@ MyFBDocuments.UserPersonItem friendWithConflict = new MyFBDocuments.UserPersonIt
 MyFBDocuments.EventItem fakeEventData1 = new MyFBDocuments.EventItem(
 title: "D2 Dinner",
 endTime: new DateTime.now(),
-activity: "Activity ",
+activity: "Hangout",
 calendar: MyFBConstants.FreeTimeCalendar3,
 groupID: "unique group ID",
 note: "I feel like eating at D2.",
@@ -29,7 +29,7 @@ documentID: "Unique Document ID"
 MyFBDocuments.EventItem fakeEventData2 = new MyFBDocuments.EventItem(
     title: "D2 Dinner",
     endTime: new DateTime.now(),
-    activity: "Activity ",
+    activity: "Hangout",
     calendar: MyFBConstants.FreeTimeCalendar3,
     groupID: "unique group ID",
     note: "I feel like eating at D2.",
