@@ -19,8 +19,6 @@ final String userScheduleNode = "userSchedule";
 
 final String userOrganizationsNode = "userOrgs";
 
-
-
 /////////////////////////////////////////////////////////////////////////////////
 
 // For search key parameter
@@ -41,15 +39,6 @@ final String timestampViewed2 = "timestampViewed";
 
 /////////////////////////////////////////////////////////////////////////////////
 
-
-/////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////
-
 // schedule Constants
 final String eventTitle2 = "eventTitle";
 final String startTime2 = "startTime";
@@ -58,12 +47,6 @@ final String eventActivity2 = "eventActivity";
 final String eventCalendar2 = "eventCalendar";
 final String eventNote2 = "eventNote";
 //final String eventGroupId2 = "eventGroupId";
-
-////////////////////////////////////////////////////////////////////////////////
-// userFriends node constants
-//final String photoUrl2 = "photoUrl";
-
-///////////////////////////////////////////////////////////////////////////////
 
 // user calendars
 const String FreeTimeCalendar3 = "Free Time Calendar";
@@ -76,7 +59,7 @@ const String Eat3 = "Eat";
 const String Exercise3 = "Exercise";
 const String NotSure3 = "Not Sure";
 
-///////////////////////////////////////////////////////////////////////////////
+//----------------------------------------------------------------------------
 
 // OrganizationNode nodes
 final String organizationGroupChatsNode = "orgGroupChats";
@@ -87,8 +70,3 @@ final String organizationMemberCount2 = "orgMemberCount";
 final String organizationName2 = "orgName";
 final String organizationMainChatId2 = "orgMainChatId";
 final String organizationId2 = "orgId";
-
-// userNode Organization Nodes
-//const String organizationGroupsNode = "orgGroupsNode";
-
-///////////////////////////////////////////////////////////////////////////////
