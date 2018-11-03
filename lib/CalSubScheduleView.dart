@@ -190,8 +190,6 @@ class _EventListItem extends StatelessWidget {
             MaterialPageRoute(builder: (context) =>
                 EventTabView.EventTabView(OpenEventDocument: eventDocument)),
           );
-          // open event detail page
-          Navigator.of(context).pushNamed("/EventTabView");
         },
         child: new Container(
             // could just return container
