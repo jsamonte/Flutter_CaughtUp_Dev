@@ -34,6 +34,7 @@ class CalSubScheduleViewPageState extends State<CalSubWeekView> {
 
   @override
   Widget build(BuildContext context) {
+//    return EventItemDraggable();
     return CustomScrollView(
       slivers: <Widget>[
         SliverToBoxAdapter(
@@ -124,16 +125,18 @@ class DayEventsColumn extends StatelessWidget {
         child: new Stack(
 //          children: dayEvents.map((item) => new EventItem(eventDoc: item)).toList(),
 //          children: getTextWidgets(eventItems),
-          children: eventItems,
-//          children: <Widget>[
-//            new EventItem(
-//              eventDoc: dayEvents[0],
-//            ),
-//            new EventItem(
-//              eventDoc: dayEvents[1],
-//              color: Colors.red,
-//            )
-//          ],
+//          children: eventItems,
+          children: <Widget>[
+
+            new EventItem(
+              eventDoc: dayEvents[0],
+            ),
+            new EventItem(
+              eventDoc: dayEvents[1],
+              color: Colors.red,
+            ),
+            new EventItemDraggable(),
+          ],
         ));
   }
 }
@@ -225,6 +228,8 @@ class EventItem extends StatelessWidget {
 //      width: 200.0,
       right: 0.0,
       height: hourHeight * hourDuration,
+
+
       child: Container(
           margin: EdgeInsets.symmetric(horizontal: 2.0),
 //        color: (color != null) ? color : Colors.orange,
@@ -242,43 +247,77 @@ class EventItem extends StatelessWidget {
     );
   }
 }
+class EventItemDraggable extends StatefulWidget {
+  EventItemDraggable({Key key}) : super(key: key);
 
-//class EventItem extends StatelessWidget {
-//  EventItem({Key key, this.eventDoc, this.color})
-//      : super(key: key);
-//
-//  final MyFBDocuments.EventItem eventDoc;
-//  final Color color;
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    int hourDuration = eventDoc.endTime.hour - eventDoc.startTime.hour;
-//
-//    print(eventDoc.endTime.hour.toString()+ " /// " + eventDoc.startTime.hour.toString());
-//    print("asdf" + hourDuration.toString());
-//    return new Positioned(
-//      left: 0.0,
-//      top: hourHeight * eventDoc.startTime.hour,
-//      right: 0.0,
-//      height: hourHeight * hourDuration,
-//      child: Container(
-//        margin: EdgeInsets.symmetric(horizontal: 2.0),
-////        color: (color != null) ? color : Colors.orange,
-////        margin: const EdgeInsets.all(15.0),
-////        padding: const EdgeInsets.all(3.0),
-//        decoration: new BoxDecoration(
-//            border: new Border.all(color: Colors.blueAccent)
-//        ),
-//        child:
-//        new Column(
-//          children: <Widget>[
-//            new Text(eventDoc.title),
-//            new Text(eventDoc.startTime.toString()),
-//            new Text(eventDoc.endTime.toString())
-//          ],
-//        )
-//
-//      ),
-//    );
-//  }
-//}
+  @override
+  State<StatefulWidget> createState() {
+    return _EventItemDraggableState();
+  }
+}
+
+class _EventItemDraggableState extends State<EventItemDraggable> {
+  double width = 100.0, height = 100.0;
+  Offset position ;
+
+  @override
+  void initState() {
+    super.initState();
+    position = Offset(0.0, height - 20);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Positioned(
+          left: position.dx,
+          top: position.dy - height + 20,
+          child: LongPressDraggable(
+            axis: Axis.vertical,
+            child: Container(
+              width: width,
+              height: height,
+              color: Colors.orange,
+              child: Center(child: Text("Event", style: Theme.of(context).textTheme.headline,),),
+            ),
+            childWhenDragging: Container(
+              child: Center(
+                child: Text("Event", style: Theme.of(context).textTheme.headline,),),
+              color: Colors.orange[300],
+              width: width,
+              height: height,
+            ),
+            feedback: Container(
+              child: Center(
+                child: Text("Event", style: Theme.of(context).textTheme.headline,),),
+//              color: Colors.orange,
+              width: width,
+              height: height,
+              decoration: new BoxDecoration(
+                  color: const Color(0xFF26A69A),
+                  boxShadow: [new BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 20.0,
+                  ),]
+              ),
+            ),
+            onDraggableCanceled: (Velocity velocity, Offset offset){
+              setState(() {
+
+                // Calculate the offset
+                Offset update = new Offset(position.dx, offset.dy);
+
+                print(update.toString());
+
+                // change the y value of the offset and set that to the closest
+                position = update;
+//                position = offset;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
