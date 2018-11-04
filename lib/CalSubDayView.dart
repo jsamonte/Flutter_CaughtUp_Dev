@@ -196,8 +196,6 @@ class CalSubScheduleViewPageState extends State<CalSubDayView> {
   }
 
 
-
-
   /// Create list of user friends.
   List<_EventListItem> _buildFriendsList(
       List<MyFBDocuments.EventItem> eventItemInput) {
@@ -211,8 +209,6 @@ class CalSubScheduleViewPageState extends State<CalSubDayView> {
 
 /// List of user events
 class EventsList extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return new ListView(
@@ -264,73 +260,8 @@ class _EventListItem extends StatelessWidget {
                   ),
                 ),
               ],
-            )));
+            )
+        )
+    );
   }
-
-/// Send message to designated friend.
-//  _sendMessageToFriend(
-//      BuildContext context, String friendUid, String friendName) {
-//    // Update information to send to MessengerDetailPage.dart
-//    MyVariables.chatIDForDetail = eventDocument[MyConstants.chatID2];
-//    MyVariables.chatNameForDetail =
-//        friendName; //.substring(0, friendName.indexOf(" "));
-//
-//    MyVariables.chatInfoItemForDetail = new eventDocument;
-//
-//    // notify MessengerDetailPage.dart that I am not opening a group chat
-//    MyVariables.openingGroupMessenger = false;
-//
-//    // open new messenger detail page and pass chatID
-//    /// Opens a detailed messenger page to the specified chat page.
-//    Navigator
-//        .of(context)
-//        .pushNamed("/MessengerDetailPage/${MyVariables.chatIDForDetail}");
-//
-//    // Opens DetailedMessenger page
-////    _openDetailedMessengerPage(context, MyVariables.chatID);
-//  }
-
-/// Opens a detailed messenger page to the specified chat page.
-//  _openDetailedMessengerPage(BuildContext context, String chatID) {
-////    new MyMessengerDetailPage.MessengerDetailPage(chatID: chatID, friendName: friendName);
-//
-////    final FCMNotificationsUtil.Item item = _itemForMessage(chatID);
-//
-////    item.route.isActive;
-//
-////    if (!item.route.isCurrent) {
-////      Navigator.push(context, item.route);
-////    }
-//
-////    Navigator.push(context, item.route);
-//
-//    // open new messenger detail page and pass chatID
-////    "/MessengerDetailPage": (BuildContext context) => new MessengerDetailPage.MessengerDetailPage(),
-////    Navigator.of(context).pushNamed("/MessengerDetailPage");
-//
-//    // information to pass to MessengerDetailPage
-////    MyVariables.chatID = message['chatID'];
-//    // this is the group name or the recipient name
-////    MyVariables.chatNameSend = message['senderName'];
-//    // notify MessengerDetailPage.dart if I am opening a group chat or a direct chat
-////    if (message['openedGroupChat'] == "true") {
-////      MyVariables.openingGroupMessenger = true;
-////    } else {
-////      MyVariables.openingGroupMessenger = false;
-////    }
-//    // open new messenger detail page and pass chatID
-////    Navigator
-////        .of(context)
-////        .pushNamed("/MessengerDetailPage/${MyVariables.chatIDForDetail}");
-//  }
-
-//  FCMNotificationsUtil.Item _itemForMessage(chatID) {
-////  final String itemId = message['chatID'];
-//
-//    final FCMNotificationsUtil.Item item = FCMNotificationsUtil.items
-//        .putIfAbsent(chatID, () => new FCMNotificationsUtil.Item(itemId: chatID));
-////    ..status = message['message'];
-//
-//    return item;
-//  }
 }

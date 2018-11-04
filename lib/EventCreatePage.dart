@@ -1,16 +1,11 @@
 import 'dart:async';
 
-import 'package:flutter_caughtup_dev/Utility/MyUtility.dart' as MyUtility;
-
-//import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_caughtup_dev/Utility/MyUtility.dart' as MyUtility;
 import 'package:flutter_caughtup_dev/Utility/MyFBDocuments.dart' as MyFBDocuments;
 import 'package:flutter_caughtup_dev/Utility/MyFBConstants.dart' as MyFBConstants;
-
 import './CalSubScheduleView.dart' as CalSubScheduleView;
 import 'package:flutter_caughtup_dev/Utility/MyScheduleFirebaseUtility.dart' as MyScheduleFirebaseUtility;
-
 import 'package:intl/intl.dart';
 
 // user message to send as part of the hangout invite

@@ -5,6 +5,8 @@ import 'package:flutter_caughtup_dev/Utility/FakeData.dart' as FakeData;
 import './EventTabView.dart' as EventTabView;
 import './CalMainNavigationDrawer.dart' as CalMainNavigationDrawer;
 import './EventCreatePage.dart' as EventCreatePage;
+//import './OldCalSubDayViewSelector.dart' as OldCalSubDayViewSelector;
+
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -133,6 +135,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       OpenEventDocument: FakeData.fakeEventData2,)
                     ),
                   );
+                }
+            ),
+            new RaisedButton(
+                child: const Text('Old Day View'),
+                color: Theme.of(context).accentColor,
+                elevation: 4.0,
+                splashColor: Colors.orange,
+                onPressed: (){
+//                  Navigator.push(
+//                    context,
+//                    MaterialPageRoute(builder: (context) => OldCalSubDayViewSelector.CalSubDayViewSelector()
+//                    ),
+//                  );
                 }
             ),
             new Text(
