@@ -76,7 +76,7 @@ class EventSubDetailPageState extends State<EventSubDetailPage> {
                           ),
 
                           new _InfoCategory(
-                            icon: Icons.person,
+                            icon: Icons.calendar_today,
                             children: <Widget>[
                               new _InfoItem(
                                 lines: <String>[
@@ -88,7 +88,7 @@ class EventSubDetailPageState extends State<EventSubDetailPage> {
                           ),
 
                           new _InfoCategory(
-                            icon: Icons.person,
+                            icon: Icons.directions_bike,
                             children: <Widget>[
                               new _InfoItem(
                                 lines: <String>[
@@ -100,7 +100,7 @@ class EventSubDetailPageState extends State<EventSubDetailPage> {
                           ),
 
                           new _InfoCategory(
-                            icon: Icons.person,
+                            icon: Icons.timer,
                             children: <Widget>[
                               new _InfoItem(
                                 lines: <String>[
@@ -112,7 +112,7 @@ class EventSubDetailPageState extends State<EventSubDetailPage> {
                           ),
 
                           new _InfoCategory(
-                            icon: Icons.person,
+                            icon: Icons.timer_off,
                             children: <Widget>[
                               new _InfoItem(
                                 lines: <String>[
