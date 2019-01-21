@@ -1,8 +1,15 @@
-# flutter_caughtup_dev
+# CaughtUp Flutter Dev
+Flutter Mobile Development Environment for the [CaughtUp App](https://www.caughtup-app.com/). 
 
-A new Flutter application.
+# Notes
+- This is a Flutter application where we test and create components for the CaughtUp Mobile Application.
 
-## Getting Started
+# Environment 
+- This is being edited in [Android Studio](https://developer.android.com/studio/) with the [Flutter SDK](https://flutter.io/) and [Dart SDK](https://www.dartlang.org/)
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+
+# Journal 
+- 2019.01.20 Added license and made project public
+
+# References
+- Flutter[documentation](https://flutter.io/).
